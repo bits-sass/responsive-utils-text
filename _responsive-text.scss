@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Responsive text utilities
+   ========================================================================== */
+
+/**
+ * Text utilities with responsive capability
+ *
+ * See original utilities for more info.
+ */
+
+/* Variables
+   ========================================================================== */
+
+/**
+ * Bits.sass utilities namespace
+ */
+
+$bits-utils-ns: 'bits-' !default;
+
+/* Main mixin
+   ========================================================================== */
+
+/**
+ * Mixin encapsulating a version of text utils at a certain breakpoint
+ */
+
+/**
+ * 1. Eg. 'bits-v4-'.
+ */
+
+@mixin bits-text-responsive($breakpoint) {
+  $prefix: unquote("#{$bits-utils-ns}#{$breakpoint}-"); /* 1 */
+
+  .#{$prefix}u-textLeft {
+    text-align: left !important;
+  }
+
+  .#{$prefix}u-textCenter {
+    text-align: center !important;
+  }
+
+  .#{$prefix}u-textRight {
+    text-align: right !important;
+  }
+}
